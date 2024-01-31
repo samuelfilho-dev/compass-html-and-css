@@ -136,10 +136,63 @@
                 Somewhere, NY 33333
             </address>
         </section>
+
+        <section id="contactme">
+            <h2>Contact Me</h2>
+            <form action="dosomething.html" method="POST">
+                <p>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </p>
+
+                <p>
+                    <label for="whycontacting">Why Contacting</label>
+                    <select name="whycontacting" id="whycontacting">
+                        <option value="jobinterview">Job Interview</option>
+                        <option value="needContrator">Need Contrator</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments" rows="3"></textarea>
+                </p>
+
+                <fieldset>
+                    <legend>Best Contact Time</legend>
+                    <p>
+                        <label for="contacttime1">Morning</label>
+                        <input type="radio" id="contacttime1" name="contacttime" value="morning" />
+                    </p>
+                    <p>
+                        <label for="contacttime1">Afternoon</label>
+                        <input type="radio" id="contacttime2" name="contacttime" value="afternoon" />
+                    </p>
+                    <p>
+                        <label for="contacttime3">Evening</label>
+                        <input type="radio" id="contacttime3" name="contacttime" value="evening" />
+                    </p>
+                    <p>
+                        <label for="asap">ASAP</label>
+                        <input type="checkbox" id="asap" name="asap">
+                    </p>
+                </fieldset>
+                
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
+        </section>
     </main>
+
     <aside>
         <p>Advertisements for my other courses</p>
     </aside>
+
 </body>
 
 </html>
