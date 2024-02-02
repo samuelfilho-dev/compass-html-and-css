@@ -1,3 +1,31 @@
-#aboutme p:nth-of-type(odd) {
-    font-weight: bold;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+}
+
+main {
+    max-width: 700px;
+    padding: 0 2rem;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    margin: 0 auto;
+}
+
+#testimonials blockquote{
+    border: solid 1px black;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.contact-field {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-field legend{
+    padding: 0;
 }
