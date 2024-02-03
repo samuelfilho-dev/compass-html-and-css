@@ -15,7 +15,8 @@ nav {
 
 nav ul {
     display: flex;
-
+    flex-wrap: wrap;
+    margin-inline: 0;
 }
 
 nav ul li {
@@ -40,10 +41,17 @@ main {
     background-color: black;
     color: white;
     display: flex;
+    flex-wrap: wrap;
+}
+
+#aboutme aside {
+    order: 10;
 }
 
 #testimonials {
     display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
 }
 
 #testimonials blockquote{
