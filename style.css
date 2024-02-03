@@ -5,13 +5,24 @@
 body {
     font-size: 16px;
     display: grid;
+    margin-inline: 0;
+    margin-block: 0;
+    font-family: 'Montserrat', 'Dosis';
+}
+
+h1, h2 {
+    font-family: 'Dosis', sans-serif;
+    font-weight: 300;
+}
+
+input, select, textarea {
+    font-family: 'Montserrat', sans-serif;
 }
 
 nav {
     position: sticky;
     top: 0;
     background-color: white;
-    text-align: center;
     display: flex;
     justify-content: center;
 }
@@ -30,13 +41,19 @@ nav ul li {
 }
 
 main {
-    max-inline-size: clamp(700px, 50%, 900px);
-    padding-inline: 2rem;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
     padding-block: 0;
-    border-inline-start: solid 2px black;
-    border-inline-end: solid 2px black;
-    margin-inline: auto;
     margin-block: 0;
+}
+
+main > * {
+    grid-column: 2;
+}
+
+.full-bleed {
+    grid-column: 1 / span 3;
+    padding-inline: 2rem;
 }
 
 .flex-header,
