@@ -39,7 +39,8 @@ main {
     margin-block: 0;
 }
 
-.flex-header, .motto {
+.flex-header,
+.motto {
     flex-basis: 100%;
 }
 
@@ -56,12 +57,22 @@ main {
 
 #portfolio {
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    grid-template: repeat(2, 1fr) / repeat(5, 1fr);
+    grid-template-areas: "portfolio anchor img1 img2 img3"
+        "portfolio anchor img4 img5 img6";
     grid-gap: 10px;
+}
+
+#portfolio h2 {
+    grid-area: portfolio;
 }
 
 #portfolio img {
     max-inline-size: 100%;
+}
+
+img.anchor {
+    grid-area: anchor;
 }
 
 #testimonials {
@@ -98,7 +109,7 @@ blockquote.featured {
     padding-block: 0;
 }
 
-.contact-field legend{
+.contact-field legend {
     padding-inline: 0;
     padding-block: 0;
 }
