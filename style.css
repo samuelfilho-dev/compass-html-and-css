@@ -40,6 +40,7 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     padding-inline: 0;
+    justify-content: center;
 }
 
 nav ul li {
@@ -207,6 +208,38 @@ img.anchor {
 .my-picture {
     max-inline-size: 75px;
     margin-inline-end: 1rem;
+}
+
+@media screen and (max-width: 767.98px) {
+    main {
+        grid-template-columns: 25px 1fr 25px;
+
+    }
+
+    #aboutme {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .my-picture {
+        margin-inline-end: 0;
+    }
+
+    #portfolio {
+        grid-template: 1fr / repeat(2, 1fr);
+        grid-template-areas: "portfolio portfolio" 
+        "anchor img1";
+    }
+}
+
+@media screen and (min-width: 1200px){
+    main {
+        grid-template-columns: 1fr 900px 1fr;
+    }
+
+    .full-bleed {
+        padding-inline: 15%;
+    }
 }
 
 /* z-index testing */
