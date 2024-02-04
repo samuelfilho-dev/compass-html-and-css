@@ -13,6 +13,12 @@ body {
 h1, h2 {
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
+    text-transform: uppercase;
+    color: #3d3d3d;
+}
+
+h1 {
+    margin-block-end: 0.75rem;
 }
 
 input, select, textarea {
@@ -45,10 +51,15 @@ main {
     grid-template-columns: 50px 1fr 50px;
     padding-block: 0;
     margin-block: 0;
+    row-gap: 10px;
 }
 
 main > * {
     grid-column: 2;
+}
+
+.social_logo {
+    inline-size: 1rem;
 }
 
 .full-bleed {
@@ -68,6 +79,10 @@ main > * {
     flex-wrap: wrap;
 }
 
+#aboutme h2 {
+    color: white;
+}
+
 #aboutme aside {
     order: 10;
 }
@@ -79,6 +94,8 @@ main > * {
         "portfolio anchor img4 img5 img6";
     grid-gap: 10px;
     align-items: end;
+    background-color: rgba(247, 77, 101, 0.9);
+    padding-block: 1rem;
 }
 
 #portfolio h2 {
@@ -89,6 +106,11 @@ main > * {
 
 #portfolio img {
     max-inline-size: 100%;
+}
+
+#portfolio img:hover {
+    opacity: 0.7;
+    transition: opacity 1s linear;
 }
 
 img.anchor {
@@ -143,6 +165,21 @@ blockquote.featured {
 
 .field {
     margin-block-end: 1.25rem;
+}
+
+.button {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    padding-inline: 1rem;
+    padding-block: .5rem;
+    border-inline: none;
+    border-block: none;
+}
+
+.button:hover {
+    background-color: rgba(247, 77, 101, 0.9);
+    transition: background-color .5s;
 }
 
 .my-picture {
