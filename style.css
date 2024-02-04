@@ -1,3 +1,7 @@
+:root {
+    --accent-color: rgba(247, 77, 101, 0.9);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -112,7 +116,7 @@ main>* {
         "anchor img1";
     grid-gap: 10px;
     align-items: end;
-    background-color: rgba(247, 77, 101, 0.9);
+    background-color: var(--accent-color, pink);
     padding-block: 1rem;
 }
 
@@ -204,7 +208,7 @@ img.anchor {
 }
 
 .button:hover {
-    background-color: rgba(247, 77, 101, 0.9);
+    background-color: var(--accent-color, pink);
     transition: background-color .5s;
 }
 
@@ -242,6 +246,17 @@ img.anchor {
 
     .full-bleed {
         padding-inline: 15%;
+    }
+}
+
+@media print {
+    #aboutme {
+        background-color: white;
+        color: black;
+    }
+
+    #contactme {
+        display: none;
     }
 }
 
