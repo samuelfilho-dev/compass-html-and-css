@@ -10,7 +10,8 @@ body {
     font-family: 'Montserrat', 'Dosis';
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Dosis', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
@@ -21,7 +22,9 @@ h1 {
     margin-block-end: 0.75rem;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -54,7 +57,7 @@ main {
     row-gap: 10px;
 }
 
-main > * {
+main>* {
     grid-column: 2;
 }
 
@@ -68,7 +71,8 @@ main > * {
 }
 
 .flex-header,
-.motto {
+.motto,
+#aboutme footer {
     flex-basis: 100%;
 }
 
@@ -85,6 +89,17 @@ main > * {
 
 #aboutme aside {
     order: 10;
+    text-align: center;
+}
+
+#aboutme footer {
+    text-align: center;
+}
+
+#aboutme footer a,
+#aboutme footer a:visited,
+#aboutme footer a:hover {
+    color: white;
 }
 
 #portfolio {
@@ -138,9 +153,13 @@ img.anchor {
 }
 
 
-blockquote.featured {
+#testimonials blockquote.featured {
     order: -1;
     flex: 1 0 auto;
+    background-color: black;
+    color: white;
+    margin-inline-start: 1rem;
+    font-weight: bold;
 }
 
 .contact-field {
@@ -159,8 +178,11 @@ blockquote.featured {
 
 .label-standard {
     display: block;
-    margin-inline: 0.125rem;
     margin-block: 0.125rem;
+}
+
+.label-standard, .contact-field legend {
+    font-size: 0.875rem;
 }
 
 .field {
