@@ -52,7 +52,7 @@ nav ul li {
 
 main {
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: 25px 1fr 25px;
     padding-block: 0;
     margin-block: 0;
     row-gap: 10px;
@@ -82,6 +82,8 @@ main>* {
     color: white;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
 }
 
 #aboutme h2 {
@@ -106,8 +108,8 @@ main>* {
 #portfolio {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(5, 1fr);
-    grid-template-areas: "portfolio anchor img1 img2 img3"
-        "portfolio anchor img4 img5 img6";
+    grid-template-areas: "portfolio portfolio"
+        "anchor img1";
     grid-gap: 10px;
     align-items: end;
     background-color: rgba(247, 77, 101, 0.9);
@@ -182,7 +184,8 @@ img.anchor {
     margin-block: 0.125rem;
 }
 
-.label-standard, .contact-field legend {
+.label-standard,
+.contact-field legend {
     font-size: 0.875rem;
 }
 
@@ -207,32 +210,32 @@ img.anchor {
 
 .my-picture {
     max-inline-size: 75px;
-    margin-inline-end: 1rem;
+    margin-inline-end: 0;
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (min-width: 768px) {
     main {
-        grid-template-columns: 25px 1fr 25px;
+        grid-template-columns: 50px 1fr 50px;
 
     }
 
     #aboutme {
-        justify-content: center;
-        text-align: center;
+        justify-content: initial;
+        text-align: initial;
     }
 
     .my-picture {
-        margin-inline-end: 0;
+        margin-inline-end: 1rem;
     }
 
     #portfolio {
         grid-template: 1fr / repeat(2, 1fr);
-        grid-template-areas: "portfolio portfolio" 
-        "anchor img1";
+        grid-template-areas: "portfolio anchor img1 img2 img3"
+            "portfolio anchor img4 img5 img6";
     }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
     main {
         grid-template-columns: 1fr 900px 1fr;
     }
